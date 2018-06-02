@@ -15,9 +15,9 @@ class String
   end
 
   def count_sentences
-    splitted_str = split
+    new_str = split
     counter = 0
-    counter += splitted_str.count(".")
+    counter += new_str.count(".")
     counter
   end
 end
