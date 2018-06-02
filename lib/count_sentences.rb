@@ -17,7 +17,8 @@ class String
   def count_sentences
     new_str = split
     counter = 0
-    counter += new_str.count {|x| x == "." || x == "!" || x == "?" || x == "..."}
+    counter += new_str.count {|x| 
+      x.sentence? || x.question? || x.exclamation? || x.end_with?("...")}
     counter
   end
 end
